@@ -1,0 +1,27 @@
+
+# Installing SDL 
+# https://wiki.libsdl.org/Installation
+
+sudo apt install libsdl2-dev
+
+# Once you have the library installed, you can use the sdl2-config program to help you compile your own code:
+
+gcc -o myprogram myprogram.c `sdl2-config --cflags --libs`
+
+gcc -o main main.c utils.c `sdl2-config --cflags --libs` && ./main
+
+gcc -o main main.c -lSDL2 -lSDL2_image && ./main
+
+gcc:
+-I<search path to include files>
+-L<search path to the lib file>
+-l<libname>
+
+# Install SDL_image
+# https://www.libsdl.org/projects/SDL_image/
+
+sudo apt install libsdl2-image-dev
+
+# Install SDL_ttf
+
+sudo apt install libsdl2-ttf-dev
